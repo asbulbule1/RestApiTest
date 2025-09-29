@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3.9'   // Use the Maven name you configured in Jenkins
-        jdk 'JDK17'        // Use the JDK name you configured in Jenkins
+        maven 'maven'   // Use the Maven name you configured in Jenkins
+        jdk 'JDK21'        // Use the JDK name you configured in Jenkins
     }
 
     stages {
@@ -16,7 +16,6 @@ pipeline {
         stage('Preserve History') {
             steps {
                 script {
-                    // Copy previous history into current allure-results
                     if (fileExists("target/allure-report/history")) {
                         echo "Copying history from previous build..."
                         bat """
