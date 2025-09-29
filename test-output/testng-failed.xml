@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testcases.CartTests">
+        <methods>
+          <include name="testCreateCart"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.CartTests -->
+      <class name="testcases.LoginTests">
+        <methods>
+          <include name="testValidUserLogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.LoginTests -->
+      <class name="testcases.ProductDataDrivenTest">
+        <methods>
+          <include name="testAddNewProduct" invocation-numbers="0 1 2 3 4"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.ProductDataDrivenTest -->
+      <class name="testcases.ProductTests">
+        <methods>
+          <include name="testAddNewProduct"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.ProductTests -->
+      <class name="testcases.UserTests">
+        <methods>
+          <include name="testCreateUser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.UserTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
